@@ -1,0 +1,75 @@
+
+#include <stdio.h>
+
+struct box
+{   int length;
+    int widht;
+    int tall;   
+} box[], volume;
+
+int main()
+{
+    int i = 0;
+    int n;
+    int volume;
+
+    printf ("masukkan jumlah pararellpiped\n");
+    scanf ("%d", &n);
+    printf ("jumlah pararellpiped adalah %d\n\n", n);
+    
+    
+        
+        while (i<n)
+        {
+            printf ("masukkan Panjang pararellpiped\n");
+            scanf ("%d", &box[i].length);
+            printf ("masukkan Lebar pararellpiped\n");
+            scanf ("%d", &box[i].widht);
+            printf ("masukkan tinggi pararellpiped (Harus lebih kecil dari 41)\n");
+            scanf ("%d", &box[i].tall);
+            
+            if (box[i].tall >= 41)
+            {
+                printf ("Tinggi pararellpiped melebihi kapasitas maksimal\n\n");
+                continue;
+            }
+
+            else if (box[i].length <0)
+            {
+                printf ("Panjang, lebar, dan tinggi minimal adalah 0\n\n");
+                continue;
+            }
+
+            else if (box[i].widht <0)
+            {
+                printf ("Panjang, lebar, dan tinggi minimal adalah 0\n\n");
+                continue;
+            }
+
+            else if (box[i].tall <0 )
+            {
+                printf ("Panjang, lebar, dan tinggi minimal adalah 0\n\n");
+                continue;
+            }
+
+            else
+            {
+                volume = box[i].length*box[i].widht*box[i].tall;
+                printf ("Volume adalah %d\n\n", volume);
+                ++i;
+            }
+
+        }
+
+
+        while (n <= 0)
+        {
+            printf ("Jumlah minimum Pararellpiped adalah 1\n");
+            break;
+        }
+        
+
+    return 0;
+}
+   
+        
