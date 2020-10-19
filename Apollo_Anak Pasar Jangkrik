@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int main ()
+{
+    long int x1, x2, v1, v2, jarak1, jarak2;
+    int i = 1;//dimulai dari detik ke-1
+
+    jarak1 = x1;
+    jarak2 = x2;
+
+    printf ("masukkan x1, x2, v1, dan v2 (masing-masing nilai tidak boleh lebih dari 1000) ");
+    scanf ("%ld %ld %ld %ld", &x1, &x2, &v1, &v2);//jarak awal dan kecepatan masing masing jangkrik
+
+            while (i<=60)//looping dilakukan sampai detik ke 60
+            {
+                x1 += v1;
+                x2 += v2;
+                ++i;
+
+                printf ("jarak 1: %ld\n", x1);//total jarak jangkrik 1
+                printf ("jarak 2: %ld\n", x2);//total jarak jangkrik 2
+
+
+                    if (x1 == x2)//saat jangkrik sudah berpapasan
+                    {
+                        printf ("Yes\n ");
+                        break;
+                    }
+
+                    else //saat jangkrik tidak berpapasan
+                    {
+                        printf ("No\n");
+                    }
+            }
+
+    return 0;
+}
